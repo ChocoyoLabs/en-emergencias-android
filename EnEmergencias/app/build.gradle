@@ -1,0 +1,41 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    signingConfigs {
+        release {
+            storeFile file("keystore.jks") //check that the file exists
+            storePassword ""
+            keyAlias "enemergencias"
+            keyPassword ""
+        }
+    }
+
+    compileSdkVersion 25
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        minSdkVersion 9
+        targetSdkVersion 25
+        versionCode 5
+        versionName "1.4"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+}
+
+dependencies {
+    // You must install or update the Support Repository through the SDK manager to use this dependency.
+    // The Support Repository (separate from the corresponding library) can be found in the Extras category.
+    compile 'com.android.support:appcompat-v7:25.0.1'
+    compile 'com.google.firebase:firebase-ads:9.6.1'
+    compile 'com.chocoyo.labs:splash:0.0.2'
+}
+
+apply plugin: 'com.google.gms.google-services'

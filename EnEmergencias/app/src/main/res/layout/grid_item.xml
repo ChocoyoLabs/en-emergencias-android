@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/grid_item_image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/gridViewImageViewHeight"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/ic_earthquake"
+        android:contentDescription="@string/contentDescription"
+        android:cropToPadding="true" />
+
+    <TextView
+        android:id="@+id/grid_item_text"
+        style="@style/gridText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
